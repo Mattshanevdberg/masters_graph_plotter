@@ -10,7 +10,7 @@ def plot_2d_graph(data_points):
     plt.scatter(x, y, label='Training Examples')
 
     # Performing polynomial regression to fit the data points with a polynomial of degree 3
-    coefficients = np.polyfit(x, y, 8)
+    coefficients = np.polyfit(x, y, 3)
     polynomial = np.poly1d(coefficients)
 
     # Plotting y = 5x + 10 line
@@ -21,7 +21,7 @@ def plot_2d_graph(data_points):
 
     plt.xlabel('Input data')
     plt.ylabel('Prediction')
-    plt.title('Theoretical Representation of a Model Overfitting')
+    plt.title('Theoretical Representation of a Goldilocks Model')
     plt.legend()
     plt.grid(True)
     plt.show()
