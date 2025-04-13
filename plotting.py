@@ -100,17 +100,17 @@ def plot_3d_function2():
     ax = fig.add_subplot(111, projection='3d')
 
  # Plot the global minimum
-    ax.scatter(global_min_x, global_min_y, global_min_z, color='red', s=50, label='Global Minimum', zorder=1)
+    ax.scatter(global_min_x, global_min_y, global_min_z, color='red', s=50, label='Minima', zorder=1)
     ax.scatter(1.85, -1.85, rosenbrock(1.85, -1.85), color='blue', s=50, label='Starting Point', zorder=2)
 
     # Plot the Rosenbrock function
-    ax.plot_surface(x, y, z, cmap='viridis', alpha=1, label='Cost Function', zorder=0)
+    ax.plot_surface(x, y, z, cmap='viridis', alpha=1, label='Loss Function', zorder=0)
 
    
-    ax.set_xlabel('First Trainable Parameter: w_0')
-    ax.set_ylabel('Second Trainable Parameter: w_1')
-    ax.set_zlabel('Cost: E(w_0,w_1)', labelpad=10)
-    ax.set_title('Theoretical Example of Finding a Global Minimum of the Cost Function')
+    ax.set_xlabel(r'First Trainable Parameter: $w_0$')
+    ax.set_ylabel(r'Second Trainable Parameter: $w_1$')
+    ax.set_zlabel(r'Loss: $L(w_0,w_1)$', labelpad=10)
+    ax.set_title('Visual Representation of the Optimisation Function Minimising the Loss')
     ax.legend()
 
     plt.show()
