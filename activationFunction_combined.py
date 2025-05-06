@@ -31,7 +31,7 @@ plt.plot(x, swish(x), label=r'$\mathrm{Swish}(x)$')
 
 # Labels and legend
 plt.xlabel('x')
-plt.ylabel('f(x)')
+plt.ylabel('a(x)')
 plt.title('Commonly used activation functions')
 plt.legend()
 
